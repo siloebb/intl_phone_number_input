@@ -29,9 +29,9 @@ class Item extends StatelessWidget {
     if (trailingSpace) {
       dialCode = dialCode.padRight(5, "   ");
     }
-    return Container(
+    return Center(
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           SizedBox(width: leadingPadding),
@@ -40,9 +40,9 @@ class Item extends StatelessWidget {
             showFlag: showFlag,
             useEmoji: useEmoji,
           ),
-          SizedBox(width: 12.0),
+          SizedBox(width: 10.0),
           Text(
-            '$dialCode',
+            '${dialCode.trim()}',
             textDirection: TextDirection.ltr,
             style: textStyle,
           ),

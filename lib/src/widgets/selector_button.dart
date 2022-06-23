@@ -66,6 +66,7 @@ class SelectorButton extends StatelessWidget {
             key: Key(TestHelper.DropdownButtonKeyValue),
             padding: EdgeInsets.zero,
             minWidth: 0,
+            height: 48,
             onPressed: countries.isNotEmpty && countries.length > 1 && isEnabled
                 ? () async {
                     Country? selected;
@@ -83,8 +84,14 @@ class SelectorButton extends StatelessWidget {
                     }
                   }
                 : null,
-            child: Padding(
-              padding: const EdgeInsets.only(right: 8.0),
+            color: Color(0xff232020),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(4.0),
+            ),
+            elevation: 0,
+            child: Container(
+              padding: const EdgeInsets.only(left: 9.0, right: 9.0),
+              height: 56,
               child: Item(
                 country: country,
                 showFlag: selectorConfig.showFlags,
